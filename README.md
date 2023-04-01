@@ -58,7 +58,7 @@ $ yarn start
 
 ## Download
 
-You can [download](https://github.com/wontory/KAT-V2/releases/tag/v1.0.0) the latest installable version of Markdownify for Windows, macOS and Linux.
+You can [download](https://github.com/wontory/KAT-V2/releases/tag/v1.0.0) the latest installable version of KAT-V2 for Windows, macOS and Linux.
 
 ## Emailware
 
