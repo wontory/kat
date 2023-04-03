@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomInput from '../UI/CustomInput';
+import CustomInput from '../ui/CustomInput';
 
 function ClassForm() {
   return (

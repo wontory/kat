@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ClassItem from './components/Classes/ClassItem';
-import CustomButton from './components/UI/CustomButton';
-import SubmitButton from './components/UI/SubmitButton';
+import CustomButton from './components/ui/CustomButton';
+import SubmitButton from './components/ui/SubmitButton';
 
 function App() {
   const DUMMY_DATA = [

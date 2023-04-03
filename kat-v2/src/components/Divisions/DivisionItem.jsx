@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DivisionForm from './DivisionForm';
 
-// eslint-disable-next-line react/prop-types
 function DivisionItem({ id }) {
   return (
     <div className="space-y-4 md:space-y-6">
@@ -16,5 +16,9 @@ function DivisionItem({ id }) {
     </div>
   );
 }
+
+DivisionItem.propTypes = {
+  id: PropTypes.string.isRequired,
+};
 
 export default DivisionItem;

@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
 function SubmitButton({ text }) {
   return (
     <button
@@ -11,5 +11,9 @@ function SubmitButton({ text }) {
     </button>
   );
 }
+
+SubmitButton.propTypes = {
+  text: PropTypes.string.isRequired,
+};
 
 export default SubmitButton;

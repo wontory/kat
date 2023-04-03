@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Card from '../UI/Card';
+import PropTypes from 'prop-types';
+import Card from '../ui/Card';
 import ClassForm from './ClassForm';
 import DivisionItem from '../Divisions/DivisionItem';
-import CustomButton from '../UI/CustomButton';
+import CustomButton from '../ui/CustomButton';
 
-// eslint-disable-next-line react/prop-types
 function ClassItem({ id }) {
   const DUMMY_DATA = [
     {
@@ -44,5 +44,9 @@ function ClassItem({ id }) {
     </Card>
   );
 }
+
+ClassItem.propTypes = {
+  id: PropTypes.string.isRequired,
+};
 
 export default ClassItem;

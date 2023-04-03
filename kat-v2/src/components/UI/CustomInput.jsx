@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
 function CustomInput({ label, type, name, id, placeholder }) {
   return (
     <div>
@@ -21,5 +21,13 @@ function CustomInput({ label, type, name, id, placeholder }) {
     </div>
   );
 }
+
+CustomInput.propTypes = {
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+};
 
 export default CustomInput;
