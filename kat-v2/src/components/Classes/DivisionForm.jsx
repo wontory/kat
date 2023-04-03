@@ -10,7 +10,6 @@ function DivisionForm() {
         name="day"
         id="day"
         placeholder="월"
-        required="true"
       />
       <TextInput
         label="시간"
@@ -18,7 +17,6 @@ function DivisionForm() {
         name="time"
         id="time"
         placeholder="123"
-        required="true"
       />
       <TextInput
         label="교수"
@@ -26,7 +24,6 @@ function DivisionForm() {
         name="professor"
         id="professor"
         placeholder="나관상"
-        required="true"
       />
     </div>
   );

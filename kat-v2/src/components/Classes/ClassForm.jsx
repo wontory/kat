@@ -10,7 +10,6 @@ function ClassForm() {
         name="title"
         id="title"
         placeholder="컴퓨터공학기초캡스톤디자인"
-        required="true"
       />
       <TextInput
         label="학점"
@@ -18,7 +17,6 @@ function ClassForm() {
         name="credit"
         id="credit"
         placeholder="3"
-        required="true"
       />
     </div>
   );
