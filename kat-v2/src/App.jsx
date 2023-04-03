@@ -25,7 +25,7 @@ function App() {
 
   return (
     <form>
-      <div className="flex overflow-x-scroll">
+      <div className="flex items-start overflow-x-scroll">
         {classes.map((classData) => (
           <ClassItem key={classData.id} id={classData.id} />
         ))}
