@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Card from '../UI/Card';
 import ClassForm from './ClassForm';
-import DivisionItem from './DivisionItem';
+import DivisionItem from '../Divisions/DivisionItem';
 import CustomButton from '../UI/CustomButton';
 
 // eslint-disable-next-line react/prop-types
