@@ -1,17 +1,17 @@
 import React from 'react';
-import TextInput from '../Forms/TextInput';
+import CustomInput from '../UI/CustomInput';
 
 function ClassForm() {
   return (
     <div className="space-y-4 md:space-y-6">
-      <TextInput
+      <CustomInput
         label="강의명"
         type="text"
         name="title"
         id="title"
         placeholder="컴퓨터공학기초캡스톤디자인"
       />
-      <TextInput
+      <CustomInput
         label="학점"
         type="number"
         name="credit"

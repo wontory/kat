@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Card from '../UI/Card';
 import ClassForm from './ClassForm';
 import DivisionItem from './DivisionItem';
-import Button from '../Forms/Button';
+import CustomButton from '../UI/CustomButton';
 
 // eslint-disable-next-line react/prop-types
 function ClassItem({ id }) {
@@ -39,7 +39,7 @@ function ClassItem({ id }) {
         <DivisionItem key={division.id} id={division.id} />
       ))}
       <div className="space-y-4 md:space-y-6" action="#">
-        <Button text="분반 추가" onClick={handleAddDivision} />
+        <CustomButton text="분반 추가" onClick={handleAddDivision} />
       </div>
     </Card>
   );

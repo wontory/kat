@@ -1,7 +1,7 @@
 import React from 'react';
 
 // eslint-disable-next-line react/prop-types
-function Button({ text, onClick, style }) {
+function CustomButton({ text, onClick, style }) {
   const buttonStyle = {
     ...style,
     cursor: 'pointer',
@@ -17,4 +17,4 @@ function Button({ text, onClick, style }) {
   );
 }
 
-export default Button;
+export default CustomButton;

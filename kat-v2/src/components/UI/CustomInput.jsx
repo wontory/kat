@@ -1,7 +1,7 @@
 import React from 'react';
 
 // eslint-disable-next-line react/prop-types
-function TextInput({ label, type, name, id, placeholder }) {
+function CustomInput({ label, type, name, id, placeholder }) {
   return (
     <div>
       <label
@@ -22,4 +22,4 @@ function TextInput({ label, type, name, id, placeholder }) {
   );
 }
 
-export default TextInput;
+export default CustomInput;
