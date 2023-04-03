@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ClassItem from './components/Classes/ClassItem';
-import Button from './components/Forms/Button';
-import SubmitButton from './components/Forms/SubmitButton';
+import CustomButton from './components/UI/CustomButton';
+import SubmitButton from './components/UI/SubmitButton';
 
 function App() {
   const DUMMY_DATA = [
@@ -29,7 +29,7 @@ function App() {
         {classes.map((classData) => (
           <ClassItem key={classData.id} id={classData.id} />
         ))}
-        <Button text="강의 추가" onClick={handleAddClass} />
+        <CustomButton text="강의 추가" onClick={handleAddClass} />
       </div>
       <SubmitButton text="시간표 생성" />
     </form>
