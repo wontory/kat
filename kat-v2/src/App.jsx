@@ -102,7 +102,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="flex gap-8">
       <LecturesList items={lectures} />
       <NewLecture id={lectures.length + 1} onAddLecture={addLectureHandler} />
     </div>
