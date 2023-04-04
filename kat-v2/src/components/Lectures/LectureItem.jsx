@@ -1,18 +1,21 @@
 import React from "react";
 
-const App = () => {
+import DivisionsList from "../Divisions/DivisionsList";
+
+const LectureItem = (props) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <div className="card-body">
-        <h2 className="card-title">강의 추가</h2>
+        <h2 className="card-title">강좌 {props.id.substring(1)}</h2>
         <div className="form-control w-full max-w-xs">
           <label className="label">
-            <span className="label-text">강의명</span>
+            <span className="label-text">과목명</span>
           </label>
           <input
             type="text"
-            placeholder="컴퓨터공학기초캡스톤디자인"
+            value={props.name}
             className="input input-bordered w-full max-w-xs"
+            disabled
           />
         </div>
         <div className="form-control w-full max-w-xs">
@@ -23,16 +26,21 @@ const App = () => {
             type="range"
             min="1"
             max="3"
-            value="2"
+            step="1"
+            value={props.credit}
             className="range range-primary"
+            disabled
           />
+          <div className="w-full flex justify-between text-xs px-2">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
         </div>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">완료</button>
-        </div>
+        <DivisionsList items={props.divisions} />
       </div>
     </div>
   );
 };
 
-export default App;
+export default LectureItem;
