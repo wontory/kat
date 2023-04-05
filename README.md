@@ -61,13 +61,15 @@ You can [download](https://github.com/wontory/KAT-V2/releases/tag/v1.0.0) the la
 
 ## Emailware
 
-Markdownify is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <devwontory@gmail.com> about anything you'd want to say about this software. I'd really appreciate it!
+KAT-V2 is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <devwontory@gmail.com> about anything you'd want to say about this software. I'd really appreciate it!
 
 ## Credits
 
 This software uses the following open source packages:
 
 - [Node.js](https://nodejs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [daisyUI](https://daisyui.com/)
 
 ## Related
 
