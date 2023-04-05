@@ -25,7 +25,7 @@ const NewLecture = (props) => {
   return (
     <div>
       {!isEditing && (
-        <button className="btn btn-primary" onClick={startEditingHandler}>
+        <button className="btn btn-primary w-80" onClick={startEditingHandler}>
           강좌 추가
         </button>
       )}

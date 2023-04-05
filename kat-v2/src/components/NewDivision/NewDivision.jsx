@@ -25,7 +25,10 @@ const NewDivision = (props) => {
   return (
     <div>
       {!isEditing && (
-        <button className="btn btn-primary" onClick={startEditingHandler}>
+        <button
+          className="btn btn-primary w-full"
+          onClick={startEditingHandler}
+        >
           분반 추가
         </button>
       )}
