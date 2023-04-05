@@ -68,6 +68,7 @@ KAT-V2 is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if 
 This software uses the following open source packages:
 
 - [Node.js](https://nodejs.org/)
+- [React.js](https://react.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [daisyUI](https://daisyui.com/)
 
