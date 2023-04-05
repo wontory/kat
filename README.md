@@ -27,7 +27,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](Screenshot 2023-04-06 at 00.10.04@2x.png)
+![screenshot](screenshot.png)
 
 ## Key Features
 
