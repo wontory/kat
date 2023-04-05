@@ -14,7 +14,7 @@ const App = () => {
           id: "d1",
           day: "월",
           time: "123",
-          prof_name: "윤익준",
+          profName: "윤익준",
         },
       ],
     },
@@ -27,25 +27,25 @@ const App = () => {
           id: "d1",
           day: "화",
           time: "123",
-          prof_name: "박차경",
+          profName: "박차경",
         },
         {
           id: "d2",
           day: "화",
           time: "678",
-          prof_name: "박차경",
+          profName: "박차경",
         },
         {
           id: "d3",
           day: "금",
           time: "123",
-          prof_name: "허난",
+          profName: "허난",
         },
         {
           id: "d4",
           day: "금",
           time: "678",
-          prof_name: "허난",
+          profName: "허난",
         },
       ],
     },
@@ -58,19 +58,19 @@ const App = () => {
           id: "d1",
           day: "월",
           time: "678",
-          prof_name: "배상원",
+          profName: "배상원",
         },
         {
           id: "d2",
           day: "화",
           time: "123",
-          prof_name: "배상원",
+          profName: "배상원",
         },
         {
           id: "d3",
           day: "수",
           time: "123",
-          prof_name: "배상원",
+          profName: "배상원",
         },
       ],
     },
@@ -83,13 +83,13 @@ const App = () => {
           id: "d1",
           day: "화",
           time: "123",
-          prof_name: "안진호",
+          profName: "안진호",
         },
         {
           id: "d2",
           day: "수",
           time: "678",
-          prof_name: "안진호",
+          profName: "안진호",
         },
       ],
     },
@@ -99,6 +99,7 @@ const App = () => {
 
   const addLectureHandler = (lecture) => {
     setLectures((prevLectures) => [...prevLectures, lecture]);
+    console.log(lectures);
   };
 
   return (

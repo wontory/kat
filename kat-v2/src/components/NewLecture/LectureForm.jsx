@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 
+import NewDivision from "../NewDivision/NewDivision";
+import DivisionsList from "../Divisions/DivisionsList";
+
 const LectureForm = (props) => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredCredit, setEnteredCredit] = useState("");
+  const [divisions, setDivisions] = useState([]);
 
   const nameChangeHandler = (event) => {
     setEnteredName(event.target.value);
@@ -12,13 +16,17 @@ const LectureForm = (props) => {
     setEnteredCredit(event.target.value);
   };
 
+  const addDivisionHandler = (division) => {
+    setDivisions((prevDivisions) => [...prevDivisions, division]);
+  };
+
   const submitHandler = (event) => {
     event.preventDefault();
 
     const lectureData = {
       name: enteredName,
       credit: +enteredCredit,
-      divisions: [],
+      divisions: divisions,
     };
 
     props.onSaveLectureData(lectureData);
@@ -62,43 +70,15 @@ const LectureForm = (props) => {
               <span>3</span>
             </div>
           </div>
-          <div className="divider"></div>
-          <h2 className="card-title">분반 1</h2>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">교시</span>
-            </label>
-            <div className="input-group">
-              <select className="select select-bordered">
-                <option disabled>요일</option>
-                <option>월</option>
-                <option>화</option>
-                <option>수</option>
-                <option>목</option>
-                <option>금</option>
-              </select>
-              <input
-                type="text"
-                placeholder="123"
-                className="input input-bordered w-full max-w-xs"
-              />
-            </div>
-          </div>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">담당교수</span>
-            </label>
-            <input
-              type="text"
-              placeholder="나관상"
-              className="input input-bordered w-full max-w-xs"
-            />
-          </div>
+          <DivisionsList items={divisions} />
+          <NewDivision
+            id={divisions.length + 1}
+            onAddDivision={addDivisionHandler}
+          />
           <div className="card-actions mt-4 justify-between">
             <button type="submit" className="btn btn-success">
               완료
             </button>
-            <button className="btn btn-primary">분반 추가</button>
             <button
               type="button"
               className="btn btn-error"
