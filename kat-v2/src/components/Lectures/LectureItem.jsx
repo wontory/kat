@@ -37,7 +37,15 @@ const LectureItem = (props) => {
             <span>3</span>
           </div>
         </div>
-        <DivisionsList items={props.divisions} />
+        {props.divisions.length === 0 && (
+          <div>
+            <div className="divider" />
+            <h2>분반 정보가 없습니다.</h2>
+          </div>
+        )}
+        {props.divisions.length !== 0 && (
+          <DivisionsList items={props.divisions} />
+        )}
       </div>
     </div>
   );
