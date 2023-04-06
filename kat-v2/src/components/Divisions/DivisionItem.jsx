@@ -3,7 +3,7 @@ import React from "react";
 const DivisionItem = (props) => {
   return (
     <div>
-      <div className="divider"></div>
+      <div className="divider" />
       <h2 className="card-title">분반 {props.id.substring(1)}</h2>
       <div className="form-control w-full max-w-xs">
         <label className="label">
