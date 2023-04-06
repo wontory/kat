@@ -5,8 +5,9 @@ import DivisionsList from "../Divisions/DivisionsList";
 
 const LectureForm = (props) => {
   const [enteredName, setEnteredName] = useState("");
-  const [enteredCredit, setEnteredCredit] = useState("");
+  const [enteredCredit, setEnteredCredit] = useState(2);
   const [divisions, setDivisions] = useState([]);
+  const [isEditing, setIsEditing] = useState(false);
 
   const nameChangeHandler = (event) => {
     setEnteredName(event.target.value);
@@ -18,6 +19,14 @@ const LectureForm = (props) => {
 
   const addDivisionHandler = (division) => {
     setDivisions((prevDivisions) => [...prevDivisions, division]);
+  };
+
+  const startEditingHandler = () => {
+    setIsEditing(true);
+  };
+
+  const stopEditingHandler = () => {
+    setIsEditing(false);
   };
 
   const submitHandler = (event) => {
@@ -49,6 +58,8 @@ const LectureForm = (props) => {
               value={enteredName}
               className="input input-bordered w-full max-w-xs"
               onChange={nameChangeHandler}
+              disabled={isEditing}
+              required
             />
           </div>
           <div className="form-control w-full max-w-xs">
@@ -63,6 +74,8 @@ const LectureForm = (props) => {
               value={enteredCredit}
               className="range range-primary"
               onChange={creditChangeHandler}
+              disabled={isEditing}
+              required
             />
             <div className="w-full flex justify-between text-xs px-2">
               <span>1</span>
@@ -70,19 +83,26 @@ const LectureForm = (props) => {
               <span>3</span>
             </div>
           </div>
-          <DivisionsList items={divisions} />
+          {divisions.length !== 0 && <DivisionsList items={divisions} />}
           <NewDivision
             id={divisions.length + 1}
             onAddDivision={addDivisionHandler}
+            onStartEditing={startEditingHandler}
+            onStopEditing={stopEditingHandler}
           />
           <div className="card-actions mt-4 justify-between">
-            <button type="submit" className="btn btn-success">
+            <button
+              type="submit"
+              className="btn btn-success"
+              disabled={isEditing}
+            >
               완료
             </button>
             <button
               type="button"
               className="btn btn-error"
               onClick={props.onCancel}
+              disabled={isEditing}
             >
               취소
             </button>

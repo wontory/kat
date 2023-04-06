@@ -12,21 +12,24 @@ const NewDivision = (props) => {
     };
     props.onAddDivision(divisionData);
     setIsEditing(false);
+    props.onStopEditing();
   };
 
   const startEditingHandler = () => {
     setIsEditing(true);
+    props.onStartEditing();
   };
 
   const stopEditingHandler = () => {
     setIsEditing(false);
+    props.onStopEditing();
   };
 
   return (
     <div>
       {!isEditing && (
         <button
-          className="btn btn-primary w-full"
+          className="btn btn-primary w-full mt-4"
           onClick={startEditingHandler}
         >
           분반 추가

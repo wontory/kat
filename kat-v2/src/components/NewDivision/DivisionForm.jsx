@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { BsX } from "react-icons/bs";
 
 const DivisionForm = (props) => {
-  const [enteredDay, setEnteredDay] = useState("");
+  const [enteredDay, setEnteredDay] = useState("요일");
   const [enteredTime, setEnteredTime] = useState("");
   const [enteredProfName, setEnteredProfName] = useState("");
 
@@ -17,9 +18,7 @@ const DivisionForm = (props) => {
     setEnteredProfName(event.target.value);
   };
 
-  const submitHandler = (event) => {
-    event.preventDefault();
-
+  const submitHandler = () => {
     const divisionData = {
       day: enteredDay,
       time: enteredTime,
@@ -35,7 +34,12 @@ const DivisionForm = (props) => {
   return (
     <div>
       <div className="divider" />
-      <h2 className="card-title">분반 {props.id}</h2>
+      <h2 className="card-title justify-between">
+        분반 {props.id}
+        <button type="button">
+          <BsX onClick={props.onCancel} />
+        </button>
+      </h2>
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text">교시</span>
@@ -43,7 +47,7 @@ const DivisionForm = (props) => {
         <div className="input-group">
           <select
             className="select select-bordered"
-            defaultValue="요일"
+            value={enteredDay}
             onChange={dayChangeHandler}
           >
             <option disabled>요일</option>
@@ -56,6 +60,7 @@ const DivisionForm = (props) => {
           <input
             type="text"
             placeholder="123"
+            value={enteredTime}
             className="input input-bordered w-full max-w-xs"
             onChange={timeChangeHandler}
           />
@@ -68,6 +73,7 @@ const DivisionForm = (props) => {
         <input
           type="text"
           placeholder="나관상"
+          value={enteredProfName}
           className="input input-bordered w-full max-w-xs"
           onChange={profNameChangeHandler}
         />
@@ -75,17 +81,10 @@ const DivisionForm = (props) => {
       <div className="card-actions mt-4 justify-between">
         <button
           type="button"
-          className="btn btn-success"
+          className="btn btn-success w-full"
           onClick={submitHandler}
         >
           완료
-        </button>
-        <button
-          type="button"
-          className="btn btn-error"
-          onClick={props.onCancel}
-        >
-          취소
         </button>
       </div>
     </div>
