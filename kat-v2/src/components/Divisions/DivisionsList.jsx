@@ -11,7 +11,7 @@ const DivisionsList = (props) => {
           id={division.id}
           day={division.day}
           time={division.time}
-          profName={division.profName}
+          professor={division.professor}
         />
       ))}
     </ul>

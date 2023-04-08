@@ -31,7 +31,7 @@ const DivisionItem = (props) => {
         </label>
         <input
           type="text"
-          value={props.profName}
+          value={props.professor}
           className="input input-bordered w-full max-w-xs"
           disabled
         />

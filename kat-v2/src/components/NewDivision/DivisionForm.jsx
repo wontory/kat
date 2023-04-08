@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { BsX } from "react-icons/bs";
 
 import DayTimeForm from "./DayTimeForm";
-import ProfNameForm from "./ProfNameForm";
+import ProfessorForm from "./ProfessorForm";
 
 const DivisionForm = (props) => {
   const [enteredDay, setEnteredDay] = useState("요일");
   const [enteredTime, setEnteredTime] = useState("");
-  const [enteredProfName, setEnteredProfName] = useState("");
+  const [enteredProfessor, setEnteredProfessor] = useState("");
 
   const dayChangeHandler = (event) => {
     setEnteredDay(event.target.value);
@@ -17,21 +17,21 @@ const DivisionForm = (props) => {
     setEnteredTime(event.target.value);
   };
 
-  const profNameChangeHandler = (event) => {
-    setEnteredProfName(event.target.value);
+  const professorChangeHandler = (event) => {
+    setEnteredProfessor(event.target.value);
   };
 
   const submitHandler = () => {
     const divisionData = {
       day: enteredDay,
       time: enteredTime,
-      profName: enteredProfName,
+      professor: enteredProfessor,
     };
 
     props.onSaveDivisionData(divisionData);
     setEnteredDay("");
     setEnteredTime("");
-    setEnteredProfName("");
+    setEnteredProfessor("");
   };
 
   return (
@@ -49,9 +49,9 @@ const DivisionForm = (props) => {
         onChangeDay={dayChangeHandler}
         onChangeTime={timeChangeHandler}
       />
-      <ProfNameForm
-        enteredProfName={enteredProfName}
-        onChangeProfName={profNameChangeHandler}
+      <ProfessorForm
+        enteredProfessor={enteredProfessor}
+        onChangeProfessor={professorChangeHandler}
       />
       <div className="card-actions mt-4 justify-between">
         <button

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProfNameForm = (props) => {
+const ProfessorForm = (props) => {
   return (
     <div className="form-control w-full max-w-xs">
       <label className="label">
@@ -9,12 +9,12 @@ const ProfNameForm = (props) => {
       <input
         type="text"
         placeholder="나관상"
-        value={props.enteredProfName}
+        value={props.enteredProfessor}
         className="input input-bordered w-full max-w-xs"
-        onChange={props.onChangeProfName}
+        onChange={props.onChangeProfessor}
       />
     </div>
   );
 };
 
-export default ProfNameForm;
+export default ProfessorForm;
