@@ -26,7 +26,7 @@ const NewDivision = (props) => {
   };
 
   return (
-    <div>
+    <>
       {!isEditing && (
         <button
           className="btn btn-primary w-full mt-4"
@@ -42,7 +42,7 @@ const NewDivision = (props) => {
           onCancel={stopEditingHandler}
         />
       )}
-    </div>
+    </>
   );
 };
 
