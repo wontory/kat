@@ -5,20 +5,20 @@ import LectureForm from "./LectureForm";
 const NewLecture = (props) => {
   const [isEditing, setIsEditing] = useState(false);
 
+  const startEditingHandler = () => {
+    setIsEditing(true);
+  };
+
+  const stopEditingHandler = () => {
+    setIsEditing(false);
+  };
+
   const saveLectureDataHandler = (enteredLectureData) => {
     const lectureData = {
       id: `l${props.id}`,
       ...enteredLectureData,
     };
     props.onAddLecture(lectureData);
-    setIsEditing(false);
-  };
-
-  const startEditingHandler = () => {
-    setIsEditing(true);
-  };
-
-  const stopEditingHandler = () => {
     setIsEditing(false);
   };
 
