@@ -106,7 +106,7 @@ const App = () => {
   return (
     <>
       <NavigationBar />
-      <div className="flex gap-8 overflow-x-scroll z-10">
+      <div className="flex p-8 gap-8 overflow-x-scroll z-10">
         <LecturesList items={lectures} />
         <NewLecture id={lectures.length + 1} onAddLecture={addLectureHandler} />
       </div>

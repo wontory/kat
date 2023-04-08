@@ -5,7 +5,7 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
 const NavigationBar = () => {
   return (
     <div
-      className="navbar fixed bg-base-100 px-8 z-20"
+      className="navbar fixed top-0 bg-base-100 px-8 z-20"
       style={{ borderBottom: "1px solid #eeeeee" }}
     >
       <div className="flex-1">
