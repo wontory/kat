@@ -6,21 +6,21 @@ import LecturesList from "./components/Lectures/LecturesList";
 import NewLecture from "./components/NewLecture/NewLecture";
 
 const App = () => {
+  useEffect(() => {
+    callApi();
+  }, []);
+
   const [lectures, setLectures] = useState([]);
+
+  const addLectureHandler = (lecture) => {
+    setLectures((prevLectures) => [...prevLectures, lecture]);
+    console.log(lectures);
+  };
 
   const callApi = async () => {
     axios.get("/api").then((res) => {
       setLectures(res.data);
     });
-  };
-
-  useEffect(() => {
-    callApi();
-  }, []);
-
-  const addLectureHandler = (lecture) => {
-    setLectures((prevLectures) => [...prevLectures, lecture]);
-    console.log(lectures);
   };
 
   return (
