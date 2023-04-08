@@ -4,7 +4,7 @@ import DivisionsList from "../Divisions/DivisionsList";
 
 const LectureItem = (props) => {
   return (
-    <div className="card w-80 bg-base-100 shadow-xl">
+    <div className="card w-80 max-h-full bg-base-100 shadow-xl overflow-y-scroll scrollbar-hide">
       <div className="card-body">
         <h2 className="card-title">강좌 {props.id.substring(1)}</h2>
         <div className="form-control w-full max-w-xs">

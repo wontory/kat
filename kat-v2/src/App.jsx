@@ -26,7 +26,10 @@ const App = () => {
   return (
     <>
       <NavigationBar />
-      <div className="flex p-8 gap-8 overflow-x-scroll z-10">
+      <div
+        className="flex p-8 gap-8 overflow-x-scroll overflow-y-hidden z-10 scrollbar-hide"
+        style={{ height: "calc(100vh - 65px)" }}
+      >
         <LecturesList items={lectures} />
         <NewLecture id={lectures.length + 1} onAddLecture={addLectureHandler} />
       </div>
