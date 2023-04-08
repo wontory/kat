@@ -4,7 +4,7 @@ import LectureItem from "./LectureItem";
 
 const LecturesList = (props) => {
   return (
-    <ul className="flex items-start gap-8">
+    <ul className="flex items-start gap-8 ml-8 my-24">
       {props.items.map((lecture) => (
         <LectureItem
           key={lecture.id}

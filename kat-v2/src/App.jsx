@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
+import NavigationBar from "./components/ui/NavigationBar";
 import LecturesList from "./components/Lectures/LecturesList";
 import NewLecture from "./components/NewLecture/NewLecture";
-import NavigationBar from "./components/ui/NavigationBar";
 
 const App = () => {
   const DUMMY_LECTURES = [
@@ -104,13 +104,13 @@ const App = () => {
   };
 
   return (
-    <div>
+    <>
       <NavigationBar />
-      <div className="flex gap-8 m-8 overflow-x-scroll">
+      <div className="flex gap-8 overflow-x-scroll z-10">
         <LecturesList items={lectures} />
         <NewLecture id={lectures.length + 1} onAddLecture={addLectureHandler} />
       </div>
-    </div>
+    </>
   );
 };
 

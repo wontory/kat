@@ -23,7 +23,7 @@ const NewLecture = (props) => {
   };
 
   return (
-    <div>
+    <div className="my-24 mr-8">
       {!isEditing && (
         <button className="btn btn-primary w-80" onClick={startEditingHandler}>
           강좌 추가
