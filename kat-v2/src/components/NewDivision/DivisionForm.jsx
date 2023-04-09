@@ -22,6 +22,15 @@ const DivisionForm = (props) => {
   };
 
   const submitHandler = () => {
+    if (
+      enteredDay === "요일" ||
+      enteredTime === "" ||
+      enteredProfessor === ""
+    ) {
+      alert("빈 칸을 모두 입력해주세요.");
+      return;
+    }
+
     const divisionData = {
       day: enteredDay,
       time: enteredTime,
