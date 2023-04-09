@@ -25,9 +25,17 @@ const NewLecture = (props) => {
   return (
     <>
       {!isEditing && (
-        <button className="btn btn-primary w-80" onClick={startEditingHandler}>
-          강좌 추가
-        </button>
+        <div className="btn-group">
+          <button
+            className="btn btn-primary w-40"
+            onClick={startEditingHandler}
+          >
+            강좌 추가
+          </button>
+          <button className="btn btn-secondary w-40" onClick={props.onGenerate}>
+            시간표 생성
+          </button>
+        </div>
       )}
       {isEditing && (
         <LectureForm
