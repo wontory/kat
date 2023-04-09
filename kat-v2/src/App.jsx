@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 import NavigationBar from "./components/UI/NavigationBar";
 import LecturesList from "./components/Lectures/LecturesList";
@@ -7,13 +8,31 @@ import generate from "./lib/generate";
 
 const App = () => {
   const [lectures, setLectures] = useState([]);
+  const [timetables, setTimetables] = useState([]);
 
   const addLectureHandler = (lecture) => {
     setLectures((prevLectures) => [...prevLectures, lecture]);
   };
 
+  // [for test] 테스트 코드입니다.
   const generateTimetableHandler = () => {
-    console.log(generate(lectures, 0));
+    setTimetables(generate(lectures, 0));
+
+    let text = "";
+
+    timetables.forEach((timetable) => {
+      timetable.forEach(
+        (lecture) =>
+          (text += `${lecture.name}&nbsp;&nbsp;&nbsp;&nbsp;${lecture.day} ${lecture.time}&nbsp;&nbsp;&nbsp;&nbsp;${lecture.credit}&nbsp;&nbsp;&nbsp;&nbsp;${lecture.professor}<br>`)
+      );
+      text += "<br><br>";
+    });
+
+    Swal.fire({
+      title: "시간표",
+      html: text,
+      confirmButtonText: "확인",
+    });
   };
 
   return (
