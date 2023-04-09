@@ -71,6 +71,7 @@ This software uses the following open source packages:
 - [React.js](https://react.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [daisyUI](https://daisyui.com/)
+- [SweetAlert2](https://sweetalert2.github.io/)
 
 ## Related
 
