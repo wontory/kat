@@ -12,11 +12,11 @@ const LectureForm = (props) => {
   const [divisions, setDivisions] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
 
-  const nameChangeHandler = (event) => {
+  const changeNameHandler = (event) => {
     setEnteredName(event.target.value);
   };
 
-  const creditChangeHandler = (event) => {
+  const changeCreditHandler = (event) => {
     setEnteredCredit(event.target.value);
   };
 
@@ -55,12 +55,12 @@ const LectureForm = (props) => {
           <h2 className="card-title">강좌 {props.id}</h2>
           <TitleForm
             enteredName={enteredName}
-            onChangeName={nameChangeHandler}
+            onChangeName={changeNameHandler}
             onEdit={isEditing}
           />
           <CreditForm
             enteredCredit={enteredCredit}
-            onChangeCredit={creditChangeHandler}
+            onChangeCredit={changeCreditHandler}
             onEdit={isEditing}
           />
           {divisions.length !== 0 && <DivisionsList items={divisions} />}

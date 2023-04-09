@@ -10,15 +10,15 @@ const DivisionForm = (props) => {
   const [enteredTime, setEnteredTime] = useState("");
   const [enteredProfessor, setEnteredProfessor] = useState("");
 
-  const dayChangeHandler = (event) => {
+  const changeDayHandler = (event) => {
     setEnteredDay(event.target.value);
   };
 
-  const timeChangeHandler = (event) => {
+  const changeTimeHandler = (event) => {
     setEnteredTime(event.target.value);
   };
 
-  const professorChangeHandler = (event) => {
+  const changeProfessorHandler = (event) => {
     setEnteredProfessor(event.target.value);
   };
 
@@ -61,12 +61,12 @@ const DivisionForm = (props) => {
       <DayTimeForm
         enteredDay={enteredDay}
         enteredTime={enteredTime}
-        onChangeDay={dayChangeHandler}
-        onChangeTime={timeChangeHandler}
+        onChangeDay={changeDayHandler}
+        onChangeTime={changeTimeHandler}
       />
       <ProfessorForm
         enteredProfessor={enteredProfessor}
-        onChangeProfessor={professorChangeHandler}
+        onChangeProfessor={changeProfessorHandler}
       />
       <div className="card-actions mt-4 justify-between">
         <button
