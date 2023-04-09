@@ -28,7 +28,12 @@ const DivisionForm = (props) => {
       enteredTime === "" ||
       enteredProfessor === ""
     ) {
-      Swal.fire("오류", "빈 칸을 모두 입력해주세요.", "error");
+      Swal.fire({
+        title: "오류",
+        text: "빈 칸을 모두 입력해주세요.",
+        icon: "error",
+        confirmButtonText: "확인",
+      });
       return;
     }
 
