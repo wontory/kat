@@ -6,7 +6,6 @@ module.exports = {
   },
   plugins: [require("daisyui"), require("tailwind-scrollbar-hide")],
   daisyui: {
-    themes: ["light", "dark"],
-    darkTheme: "dark",
+    themes: ["light"],
   },
 };
