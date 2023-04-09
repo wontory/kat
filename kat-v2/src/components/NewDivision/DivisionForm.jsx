@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BsX } from "react-icons/bs";
+import Swal from "sweetalert2";
 
 import DayTimeForm from "./DayTimeForm";
 import ProfessorForm from "./ProfessorForm";
@@ -27,7 +28,7 @@ const DivisionForm = (props) => {
       enteredTime === "" ||
       enteredProfessor === ""
     ) {
-      alert("빈 칸을 모두 입력해주세요.");
+      Swal.fire("오류", "빈 칸을 모두 입력해주세요.", "error");
       return;
     }
 
