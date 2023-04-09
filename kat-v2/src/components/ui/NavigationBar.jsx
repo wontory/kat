@@ -9,7 +9,7 @@ const NavigationBar = () => {
       style={{ borderBottom: "1px solid #eeeeee" }}
     >
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl" href="/">
+        <a className="btn btn-ghost normal-case text-xl" href="/KAT-V2">
           KAT
         </a>
       </div>
