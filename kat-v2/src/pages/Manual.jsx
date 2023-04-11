@@ -4,10 +4,7 @@ import Comments from "../components/Comments/Comments";
 
 const Manual = () => {
   return (
-    <div
-      className="flex flex-wrap p-8 gap-8 z-10 scrollbar-hide lg:flex-nowrap"
-      style={{ height: "calc(100vh - 65px)" }}
-    >
+    <div className="flex flex-wrap items-start p-8 gap-8 z-10 scrollbar-hide lg:flex-nowrap">
       <div className="card w-full max-h-full bg-base-100 shadow-xl overflow-y-scroll scrollbar-hide lg:w-1/2">
         <div className="card-body">
           <h2 className="card-title">환영합니다!</h2>
