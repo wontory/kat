@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 import LecturesList from "../components/Lectures/LecturesList";
 import NewLecture from "../components/NewLecture/NewLecture";
@@ -12,8 +13,21 @@ const Main = (props) => {
   };
 
   const generateTimetablesHandler = () => {
-    const generatedTimetables = generate(lectures, 0);
-    props.onShowResult(generatedTimetables);
+    let generatedTimetables;
+
+    Swal.fire({
+      title: "시간표 생성중",
+      html: "잠시만 기다려주세요.",
+      timer: 1000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        generatedTimetables = generate(lectures, 0);
+      },
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.timer)
+        props.onShowResult(generatedTimetables);
+    });
   };
 
   return (
