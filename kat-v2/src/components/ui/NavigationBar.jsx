@@ -9,12 +9,9 @@ const NavigationBar = (props) => {
       style={{ borderBottom: "1px solid #eeeeee" }}
     >
       <div className="flex-1">
-        <button
-          className="btn btn-ghost normal-case text-xl"
-          onClick={props.onShowMain}
-        >
+        <a className="btn btn-ghost normal-case text-xl" href="/KAT-V2">
           KAT
-        </button>
+        </a>
       </div>
       <div className="flex-none">
         <button
