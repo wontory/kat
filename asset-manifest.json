@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/KAT-V2/static/css/main.c39cd942.css",
-    "main.js": "/KAT-V2/static/js/main.1ab1a6ff.js",
+    "main.css": "/KAT-V2/static/css/main.bace449b.css",
+    "main.js": "/KAT-V2/static/js/main.8f089d72.js",
     "index.html": "/KAT-V2/index.html",
-    "main.c39cd942.css.map": "/KAT-V2/static/css/main.c39cd942.css.map",
-    "main.1ab1a6ff.js.map": "/KAT-V2/static/js/main.1ab1a6ff.js.map"
+    "main.bace449b.css.map": "/KAT-V2/static/css/main.bace449b.css.map",
+    "main.8f089d72.js.map": "/KAT-V2/static/js/main.8f089d72.js.map"
   },
   "entrypoints": [
-    "static/css/main.c39cd942.css",
-    "static/js/main.1ab1a6ff.js"
+    "static/css/main.bace449b.css",
+    "static/js/main.8f089d72.js"
   ]
 }
