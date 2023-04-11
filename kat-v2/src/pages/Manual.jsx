@@ -1,4 +1,5 @@
 import React from "react";
+import Comments from "../components/Comments/Comments";
 
 const Manual = () => {
   return (
@@ -8,17 +9,22 @@ const Manual = () => {
     >
       <div className="card w-1/2 max-h-full bg-base-100 shadow-xl overflow-y-scroll scrollbar-hide">
         <div className="card-body">
-          <h2 className="card-title">KAT 사용법</h2>
-          <ol>
-            <li>ㅎㅇ</li>
-            <li>ㅎㅇ</li>
-            <li>ㅎㅇ</li>
-            <li>ㅎㅇ</li>
-          </ol>
+          <h2 className="card-title">환영합니다!</h2>
+          <div className="w-full max-w-xs">
+            <ol>
+              <li>ㅎㅇㅎㅇㅇㅎㅇㅇㅁㅈ</li>
+              <li>ㅎㅇㅎㅇㅇㅎㅇㅇㅁㅈ</li>
+              <li>ㅎㅇㅎㅇㅇㅎㅇㅇㅁㅈ</li>
+              <li>ㅎㅇㅎㅇㅇㅎㅇㅇㅁㅈ</li>
+            </ol>
+          </div>
         </div>
       </div>
       <div className="card w-1/2 max-h-full bg-base-100 shadow-xl overflow-y-scroll scrollbar-hide">
-        <div className="card-body"></div>
+        <div className="card-body">
+          <h2 className="card-title">댓글</h2>
+          <Comments />
+        </div>
       </div>
     </div>
   );
