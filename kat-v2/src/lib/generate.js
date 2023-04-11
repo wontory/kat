@@ -2,15 +2,9 @@ let timetables = [];
 let timetableBuffer = [];
 
 const generate = (lectures, depth) => {
-  if (depth === lectures.length) {
-    timetables.push([...timetableBuffer]);
-    return;
-  }
+  if (depth === lectures.length) return timetables.push([...timetableBuffer]);
 
-  if (depth === 0) {
-    timetables = [];
-    timetableBuffer = [];
-  }
+  if (depth === 0) timetables = [];
 
   for (const division of lectures[depth].divisions) {
     let isReserved = timetableBuffer.some((lecture) => {
@@ -30,7 +24,8 @@ const generate = (lectures, depth) => {
       };
 
       generate(lectures, depth + 1);
-      timetableBuffer[depth] = {};
+
+      timetableBuffer.pop();
     }
   }
 
