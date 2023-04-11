@@ -41,9 +41,14 @@ const Main = () => {
     >
       {lectures.length !== 0 && <LecturesList items={lectures} />}
       <NewLecture id={lectures.length + 1} onAddLecture={addLectureHandler} />
-      <button className="btn btn-secondary" onClick={generateTimetableHandler}>
-        시간표 생성
-      </button>
+      {lectures.length !== 0 && (
+        <button
+          className="btn btn-secondary"
+          onClick={generateTimetableHandler}
+        >
+          시간표 생성
+        </button>
+      )}
     </div>
   );
 };

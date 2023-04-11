@@ -1,5 +1,4 @@
 import React from "react";
-
 import Giscus from "@giscus/react";
 
 const Comments = () => {
