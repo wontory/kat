@@ -9,19 +9,19 @@ const NavigationBar = (props) => {
       style={{ borderBottom: "1px solid #eeeeee" }}
     >
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl" href="/KAT-V2">
+        <button
+          className="btn btn-ghost normal-case text-xl"
+          onClick={props.onShowMain}
+        >
           KAT
-        </a>
+        </button>
       </div>
-      <div className="navbar-end gap-2">
+      <div className="flex-none">
         <button
           className="btn btn-circle btn-ghost"
           onClick={props.onShowManual}
         >
           <BsFillInfoCircleFill className="h-6 w-6" viewBox="0 0 16 16" />
-        </button>
-        <button className="btn btn-secondary" onClick={props.onGenerate}>
-          시간표 생성
         </button>
       </div>
     </div>
