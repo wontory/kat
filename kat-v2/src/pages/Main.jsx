@@ -1,37 +1,19 @@
 import React, { useState } from "react";
-import Swal from "sweetalert2";
 
 import LecturesList from "../components/Lectures/LecturesList";
 import NewLecture from "../components/NewLecture/NewLecture";
 import generate from "../lib/generate";
 
-const Main = () => {
+const Main = (props) => {
   const [lectures, setLectures] = useState([]);
-  const [timetables, setTimetables] = useState([]);
 
   const addLectureHandler = (lecture) => {
     setLectures((prevLectures) => [...prevLectures, lecture]);
   };
 
-  // [for test] 테스트 코드입니다.
-  const generateTimetableHandler = () => {
-    setTimetables(generate(lectures, 0));
-
-    let html = "";
-
-    timetables.forEach((timetable) => {
-      timetable.forEach(
-        (lecture) =>
-          (html += `${lecture.name}&nbsp;&nbsp;&nbsp;&nbsp;${lecture.day} ${lecture.time}&nbsp;&nbsp;&nbsp;&nbsp;${lecture.credit}&nbsp;&nbsp;&nbsp;&nbsp;${lecture.professor}<br>`)
-      );
-      html += "<br><br>";
-    });
-
-    Swal.fire({
-      title: "시간표",
-      html: html,
-      confirmButtonText: "확인",
-    });
+  const generateTimetablesHandler = () => {
+    const generatedTimetables = generate(lectures, 0);
+    props.onShowResult(generatedTimetables);
   };
 
   return (
@@ -44,7 +26,7 @@ const Main = () => {
       {lectures.length !== 0 && (
         <button
           className="btn btn-secondary"
-          onClick={generateTimetableHandler}
+          onClick={generateTimetablesHandler}
         >
           시간표 생성
         </button>
