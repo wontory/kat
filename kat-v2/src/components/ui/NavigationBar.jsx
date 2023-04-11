@@ -1,6 +1,7 @@
 import React from "react";
-
 import { BsFillInfoCircleFill } from "react-icons/bs";
+
+import logo from "../../assets/logo_transparent.png";
 
 const NavigationBar = (props) => {
   return (
@@ -9,7 +10,8 @@ const NavigationBar = (props) => {
       style={{ borderBottom: "1px solid #eeeeee" }}
     >
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl" href="/KAT-V2">
+        <a className="btn btn-ghost normal-case text-xl gap-1" href="/KAT-V2">
+          <img src={logo} alt="logo" style={{ height: "17px" }} />
           KAT
         </a>
       </div>
