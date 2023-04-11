@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import LectureForm from "./LectureForm";
 
 const NewLecture = (props) => {
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(true);
 
   const startEditingHandler = () => {
     setIsEditing(true);

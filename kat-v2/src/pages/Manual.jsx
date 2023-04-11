@@ -13,29 +13,29 @@ const Manual = () => {
           <div className="w-full">
             <strong>각종 문의 및 버그 제보</strong>는&nbsp;
             <a
-              className="btn btn-warning"
+              className="btn btn-warning gap-2"
               href="mailto:tjddnjsjo@kakao.com"
               target="_top"
             >
               <RiKakaoTalkFill />
-              &nbsp;&nbsp;카카오 메일
+              카카오 메일
             </a>
             &nbsp;또는 댓글로 편하게 해주세요 😊
           </div>
           <div className="w-full">
             <a
-              className="btn btn-primary"
+              className="btn btn-primary gap-2"
               href="https://github.com/wontory/KAT-V2"
             >
               <RiGithubFill />
-              &nbsp;&nbsp;Github
+              Github
             </a>
             &nbsp;<strong>이슈 또는 PR</strong>도 환영입니다!
           </div>
           <div className="w-full">
-            <a className="btn btn-ghost" href="/">
+            <a className="btn btn-outline gap-2" href="/">
               <SiNotion />
-              &nbsp;&nbsp;릴리즈 노트 바로가기
+              릴리즈 노트 바로가기
             </a>
           </div>
           <div className="divider" />
@@ -48,14 +48,14 @@ const Manual = () => {
               <li>
                 1. 수강할 강의의 정보를&nbsp;
                 <a
-                  className="btn btn-ghost"
+                  className="badge badge-error badge-lg"
                   href="https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp"
                 >
                   KUTIS
                 </a>
                 &nbsp;또는&nbsp;
                 <a
-                  className="btn btn-ghost"
+                  className="badge badge-success badge-lg"
                   href="http://sugang.kyonggi.ac.kr/"
                 >
                   경기대학교 수강신청 시스템
