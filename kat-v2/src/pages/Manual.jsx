@@ -88,8 +88,18 @@ const Manual = () => {
                 9. 강좌와 분반을 모두 입력하였으면, 시간표 생성을 클릭해주세요.
               </li>
             </ol>
-            <img src={kutis} alt="kutis" style={{ borderRadius: "12px" }} />
-            <img src={sugang} alt="sugang" style={{ borderRadius: "12px" }} />
+            <img
+              src={kutis}
+              alt="kutis"
+              onClick={() => window.open(kutis)}
+              style={{ borderRadius: "12px", cursor: "pointer" }}
+            />
+            <img
+              src={sugang}
+              alt="sugang"
+              onClick={() => window.open(sugang)}
+              style={{ borderRadius: "12px", cursor: "pointer" }}
+            />
           </div>
         </div>
       </div>
