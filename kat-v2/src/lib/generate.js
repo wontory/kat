@@ -2,7 +2,11 @@ let timetables = [];
 let timetableBuffer = [];
 
 const generate = (lectures, depth) => {
-  if (depth === lectures.length) return timetables.push([...timetableBuffer]);
+  if (depth === lectures.length)
+    return timetables.push({
+      id: `t${timetables.length + 1}`,
+      lectures: [...timetableBuffer],
+    });
 
   if (depth === 0) timetables = [];
 
