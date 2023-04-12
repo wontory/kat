@@ -2,7 +2,7 @@ import React from "react";
 
 const DivisionItem = (props) => {
   return (
-    <>
+    <div className="card-body p-0">
       <div className="divider" />
       <h2 className="card-title">분반 {props.id}</h2>
       <div className="form-control w-full max-w-xs">
@@ -36,7 +36,7 @@ const DivisionItem = (props) => {
           disabled
         />
       </div>
-    </>
+    </div>
   );
 };
 

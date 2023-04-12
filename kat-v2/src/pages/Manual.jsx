@@ -10,40 +10,40 @@ const Manual = () => {
       <div className="card w-full max-h-full bg-base-100 shadow-xl overflow-y-scroll scrollbar-hide sm:w-1/2">
         <div className="card-body">
           <h2 className="card-title">환영합니다!</h2>
-          <div className="w-full">
-            <strong>각종 문의 및 버그 제보</strong>는&nbsp;
-            <a
-              className="btn btn-warning gap-2"
-              href="mailto:tjddnjsjo@kakao.com"
-              target="_top"
-            >
-              <RiKakaoTalkFill />
-              카카오 메일
-            </a>
-            &nbsp;또는 댓글로 편하게 해주세요 😊
-          </div>
-          <div className="w-full">
-            <a
-              className="btn btn-primary gap-2"
-              href="https://github.com/wontory/KAT-V2"
-            >
-              <RiGithubFill />
-              Github
-            </a>
-            &nbsp;<strong>이슈 또는 PR</strong>도 환영입니다!
-          </div>
-          <div className="w-full">
-            <a className="btn btn-outline gap-2" href="/">
-              <SiNotion />
-              릴리즈 노트 바로가기
-            </a>
-          </div>
-          <div className="divider" />
-          <h2 className="card-title">사용 방법</h2>
           <div
-            className="overflow-y-scroll scrollbar-hide"
-            style={{ maxHeight: "calc(100vh - 489px)" }}
+            className="card-body p-0 overflow-y-scroll scrollbar-hide"
+            style={{ maxHeight: "calc(100vh - 228px)" }}
           >
+            <div className="w-full">
+              <strong>각종 문의 및 버그 제보</strong>는&nbsp;
+              <a
+                className="btn btn-warning gap-2"
+                href="mailto:tjddnjsjo@kakao.com"
+                target="_top"
+              >
+                <RiKakaoTalkFill />
+                카카오 메일
+              </a>
+              &nbsp;또는 댓글로 편하게 해주세요 😊
+            </div>
+            <div className="w-full">
+              <a
+                className="btn btn-primary gap-2"
+                href="https://github.com/wontory/KAT-V2"
+              >
+                <RiGithubFill />
+                Github
+              </a>
+              &nbsp;<strong>이슈 또는 PR</strong>도 환영입니다!
+            </div>
+            <div className="w-full">
+              <a className="btn btn-outline gap-2" href="/">
+                <SiNotion />
+                릴리즈 노트 바로가기
+              </a>
+            </div>
+            <div className="divider" />
+            <h2 className="card-title">사용 방법</h2>
             <ol>
               <li>
                 1. 수강할 강의의 정보를&nbsp;

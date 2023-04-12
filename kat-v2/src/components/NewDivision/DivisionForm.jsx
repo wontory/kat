@@ -50,7 +50,7 @@ const DivisionForm = (props) => {
   };
 
   return (
-    <>
+    <div className="card-body p-0">
       <div className="divider" />
       <h2 className="card-title justify-between">
         분반 {props.id}
@@ -77,7 +77,7 @@ const DivisionForm = (props) => {
           완료
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

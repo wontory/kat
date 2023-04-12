@@ -6,7 +6,7 @@ const TimetableItem = (props) => {
       <div className="card-body">
         <h2 className="card-title">시간표 {props.id.substring(1)}</h2>
         <div
-          className="overflow-x-scroll scrollbar-hide"
+          className="card-body p-0 overflow-x-scroll scrollbar-hide"
           style={{ maxHeight: "calc(100vh - 228px)" }}
         >
           <table className="table table-compact w-full">

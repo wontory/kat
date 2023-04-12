@@ -52,11 +52,11 @@ const LectureForm = (props) => {
     <form onSubmit={submitHandler}>
       <div className="card w-80 max-h-full bg-base-100 shadow-xl">
         <div className="card-body">
+          <h2 className="card-title">강좌 {props.id}</h2>
           <div
-            className="overflow-y-scroll scrollbar-hide"
-            style={{ maxHeight: "calc(100vh - 192px)" }}
+            className="card-body p-0 overflow-y-scroll scrollbar-hide"
+            style={{ maxHeight: "calc(100vh - 228px)" }}
           >
-            <h2 className="card-title">강좌 {props.id}</h2>
             <TitleForm
               enteredName={enteredName}
               onChangeName={changeNameHandler}
