@@ -4,11 +4,11 @@ import LectureItem from "./LectureItem";
 
 const LecturesList = (props) => {
   return (
-    <ul className="flex items-start gap-8">
-      {props.items.map((lecture) => (
+    <ul className="flex flex-wrap justify-center items-start gap-8 lg:flex-nowrap lg:justify-normal">
+      {props.items.map((lecture, index) => (
         <LectureItem
           key={lecture.id}
-          id={lecture.id}
+          id={index + 1}
           name={lecture.name}
           credit={lecture.credit}
           divisions={lecture.divisions}

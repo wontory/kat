@@ -50,27 +50,32 @@ const LectureForm = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div className="card w-80 max-h-full bg-base-100 shadow-xl overflow-y-scroll scrollbar-hide">
+      <div className="card w-80 max-h-full bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="card-title">강좌 {props.id}</h2>
-          <TitleForm
-            enteredName={enteredName}
-            onChangeName={changeNameHandler}
-            onEdit={isEditing}
-          />
-          <CreditForm
-            enteredCredit={enteredCredit}
-            onChangeCredit={changeCreditHandler}
-            onEdit={isEditing}
-          />
-          {divisions.length !== 0 && <DivisionsList items={divisions} />}
-          <NewDivision
-            id={divisions.length + 1}
-            onAddDivision={addDivisionHandler}
-            onStartEditing={startEditingHandler}
-            onStopEditing={stopEditingHandler}
-          />
-          <ButtonForm onEdit={isEditing} onCancel={props.onCancel} />
+          <div
+            className="overflow-y-scroll scrollbar-hide"
+            style={{ maxHeight: "calc(100vh - 192px)" }}
+          >
+            <h2 className="card-title">강좌 {props.id}</h2>
+            <TitleForm
+              enteredName={enteredName}
+              onChangeName={changeNameHandler}
+              onEdit={isEditing}
+            />
+            <CreditForm
+              enteredCredit={enteredCredit}
+              onChangeCredit={changeCreditHandler}
+              onEdit={isEditing}
+            />
+            {divisions.length !== 0 && <DivisionsList items={divisions} />}
+            <NewDivision
+              id={divisions.length + 1}
+              onAddDivision={addDivisionHandler}
+              onStartEditing={startEditingHandler}
+              onStopEditing={stopEditingHandler}
+            />
+            <ButtonForm onEdit={isEditing} onCancel={props.onCancel} />
+          </div>
         </div>
       </div>
     </form>
