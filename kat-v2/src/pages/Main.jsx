@@ -31,7 +31,7 @@ const Main = (props) => {
   };
 
   return (
-    <div className="flex flex-wrap justify-center items-start p-8 gap-8 overflow-x-scroll overflow-y-hidden z-10 scrollbar-hide lg:flex-nowrap lg:justify-normal">
+    <div className="flex flex-wrap justify-center items-start p-8 gap-8 overflow-x-scroll overflow-y-hidden z-10 scrollbar-hide sm:flex-nowrap sm:justify-normal">
       {lectures.length !== 0 && <LecturesList items={lectures} />}
       <NewLecture id={lectures.length + 1} onAddLecture={addLectureHandler} />
       {lectures.length !== 0 && (
