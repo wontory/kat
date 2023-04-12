@@ -4,7 +4,7 @@ const DivisionItem = (props) => {
   return (
     <>
       <div className="divider" />
-      <h2 className="card-title">분반 {props.id.substring(1)}</h2>
+      <h2 className="card-title">분반 {props.id}</h2>
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text">교시</span>
