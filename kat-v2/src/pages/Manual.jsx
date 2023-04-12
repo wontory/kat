@@ -3,6 +3,8 @@ import { RiKakaoTalkFill, RiGithubFill } from "react-icons/ri";
 import { SiNotion } from "react-icons/si";
 
 import Comments from "../components/Comments/Comments";
+import kutis from "../assets/kutis.png";
+import sugang from "../assets/sugang.png";
 
 const Manual = () => {
   return (
@@ -86,6 +88,8 @@ const Manual = () => {
                 9. 강좌와 분반을 모두 입력하였으면, 시간표 생성을 클릭해주세요.
               </li>
             </ol>
+            <img src={kutis} alt="kutis" style={{ borderRadius: "12px" }} />
+            <img src={sugang} alt="sugang" style={{ borderRadius: "12px" }} />
           </div>
         </div>
       </div>
