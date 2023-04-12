@@ -36,7 +36,7 @@ const Main = (props) => {
       <NewLecture id={lectures.length + 1} onAddLecture={addLectureHandler} />
       {lectures.length !== 0 && (
         <button
-          className="btn btn-secondary"
+          className="btn btn-secondary w-80"
           onClick={generateTimetablesHandler}
         >
           시간표 생성
