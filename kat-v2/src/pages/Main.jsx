@@ -19,6 +19,8 @@ const Main = (props) => {
     Swal.fire({
       title: "시간표 생성중",
       html: "잠시만 기다려주세요.",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
       timer: 1000,
       timerProgressBar: true,
       didOpen: () => {
