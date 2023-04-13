@@ -53,14 +53,14 @@ const Manual = () => {
                   className="badge badge-error badge-lg"
                   href="https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp"
                 >
-                  KUTIS
+                  <strong>KUTIS</strong>
                 </a>
                 &nbsp;또는&nbsp;
                 <a
                   className="badge badge-success badge-lg"
                   href="http://sugang.kyonggi.ac.kr/"
                 >
-                  경기대학교 수강신청 시스템
+                  <strong>경기대학교 수강신청 시스템</strong>
                 </a>
                 에서 찾습니다.
               </li>
