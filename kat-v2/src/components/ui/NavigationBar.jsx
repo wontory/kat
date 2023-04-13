@@ -1,7 +1,7 @@
 import React from "react";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 
-import logo from "../../assets/logo_transparent.png";
+import logo from "../../assets/images/logo_transparent.png";
 
 const NavigationBar = (props) => {
   return (

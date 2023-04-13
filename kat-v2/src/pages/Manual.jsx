@@ -3,8 +3,8 @@ import { RiKakaoTalkFill, RiGithubFill } from "react-icons/ri";
 import { SiNotion } from "react-icons/si";
 
 import Comments from "../components/Comments/Comments";
-import kutis from "../assets/kutis.png";
-import sugang from "../assets/sugang.png";
+import kutis from "../assets/images/kutis.png";
+import sugang from "../assets/images/sugang.png";
 
 const Manual = () => {
   return (
