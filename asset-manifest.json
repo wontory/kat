@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/KAT-V2/static/css/main.f60bf6b3.css",
+    "main.css": "/KAT-V2/static/css/main.70b2563e.css",
     "main.js": "/KAT-V2/static/js/main.fe6d883f.js",
+    "static/media/PretendardVariable.woff2": "/KAT-V2/static/media/PretendardVariable.36b3a87cd98126711b2b.woff2",
     "static/media/kutis.png": "/KAT-V2/static/media/kutis.1f18580c6823f6887704.png",
     "static/media/sugang.png": "/KAT-V2/static/media/sugang.00ab9277ec0db6718757.png",
     "static/media/logo_transparent.png": "/KAT-V2/static/media/logo_transparent.062d8160c747d05b4e1d.png",
     "index.html": "/KAT-V2/index.html",
-    "main.f60bf6b3.css.map": "/KAT-V2/static/css/main.f60bf6b3.css.map",
+    "main.70b2563e.css.map": "/KAT-V2/static/css/main.70b2563e.css.map",
     "main.fe6d883f.js.map": "/KAT-V2/static/js/main.fe6d883f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f60bf6b3.css",
+    "static/css/main.70b2563e.css",
     "static/js/main.fe6d883f.js"
   ]
 }
