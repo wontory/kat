@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 
 import logo from "../../assets/images/logo_transparent.png";
@@ -10,18 +11,23 @@ const NavigationBar = (props) => {
       style={{ borderBottom: "1px solid #eeeeee" }}
     >
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl gap-1" href="/KAT-V2">
+        <Link
+          to={"/"}
+          className="btn btn-ghost normal-case text-xl gap-1"
+          href="/KAT-V2"
+        >
           <img src={logo} alt="logo" style={{ height: "17px" }} />
           KAT
-        </a>
+        </Link>
       </div>
       <div className="flex-none">
-        <button
+        <Link
+          to={"/manual"}
           className="btn btn-circle btn-ghost"
           onClick={props.onShowManual}
         >
           <BsFillInfoCircleFill className="h-6 w-6" viewBox="0 0 16 16" />
-        </button>
+        </Link>
       </div>
     </div>
   );

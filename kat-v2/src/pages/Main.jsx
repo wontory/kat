@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 import LecturesList from "../components/Lectures/LecturesList";
@@ -26,7 +27,7 @@ const Main = (props) => {
       },
     }).then((result) => {
       if (result.dismiss === Swal.DismissReason.timer)
-        props.onShowResult(generatedTimetables);
+        props.onSetTimetables(generatedTimetables);
     });
   };
 
@@ -35,12 +36,13 @@ const Main = (props) => {
       {lectures.length !== 0 && <LecturesList items={lectures} />}
       <NewLecture id={lectures.length + 1} onAddLecture={addLectureHandler} />
       {lectures.length !== 0 && (
-        <button
+        <Link
+          to={"/result"}
           className="btn btn-secondary w-80"
           onClick={generateTimetablesHandler}
         >
           시간표 생성
-        </button>
+        </Link>
       )}
     </div>
   );
