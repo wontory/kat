@@ -37,6 +37,16 @@ const DivisionForm = (props) => {
       return;
     }
 
+    if (enteredTime.length !== props.credit) {
+      Swal.fire({
+        title: "오류",
+        text: "학점과 교시를 다시 한 번 확인해주세요.",
+        icon: "error",
+        confirmButtonText: "확인",
+      });
+      return;
+    }
+
     const divisionData = {
       day: enteredDay,
       time: enteredTime,

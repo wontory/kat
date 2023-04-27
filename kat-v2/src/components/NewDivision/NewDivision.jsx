@@ -38,6 +38,7 @@ const NewDivision = (props) => {
       {isEditing && (
         <DivisionForm
           id={props.id}
+          credit={props.credit}
           onSaveDivisionData={saveDivisionDataHandler}
           onCancel={stopEditingHandler}
         />

@@ -17,7 +17,7 @@ const LectureForm = (props) => {
   };
 
   const changeCreditHandler = (event) => {
-    setEnteredCredit(event.target.value);
+    setEnteredCredit(parseInt(event.target.value));
   };
 
   const addDivisionHandler = (division) => {
@@ -60,16 +60,17 @@ const LectureForm = (props) => {
             <TitleForm
               enteredName={enteredName}
               onChangeName={changeNameHandler}
-              onEdit={isEditing}
+              disabled={isEditing}
             />
             <CreditForm
               enteredCredit={enteredCredit}
               onChangeCredit={changeCreditHandler}
-              onEdit={isEditing}
+              disabled={isEditing || divisions.length !== 0}
             />
             {divisions.length !== 0 && <DivisionsList items={divisions} />}
             <NewDivision
               id={divisions.length + 1}
+              credit={enteredCredit}
               onAddDivision={addDivisionHandler}
               onStartEditing={startEditingHandler}
               onStopEditing={stopEditingHandler}
