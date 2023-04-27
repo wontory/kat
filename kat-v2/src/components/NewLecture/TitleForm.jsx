@@ -12,7 +12,7 @@ const TitleForm = (props) => {
         value={props.enteredName}
         className="input input-bordered w-full max-w-xs"
         onChange={props.onChangeName}
-        disabled={props.onEdit}
+        disabled={props.disabled}
         required
       />
     </div>

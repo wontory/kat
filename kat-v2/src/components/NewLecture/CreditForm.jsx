@@ -14,7 +14,7 @@ const CreditForm = (props) => {
         value={props.enteredCredit}
         className="range range-primary"
         onChange={props.onChangeCredit}
-        disabled={props.onEdit}
+        disabled={props.disabled}
         required
       />
       <div className="w-full flex justify-between text-xs px-2">
