@@ -3,7 +3,7 @@ import React from "react";
 const TimetableTable = () => {
   return (
     <div className="overflow-x-scroll scrollbar-hide">
-      <table className="table table-compact w-full text-center">
+      <table className="table table-zebra table-compact w-full text-center">
         <thead>
           <tr>
             <th></th>
