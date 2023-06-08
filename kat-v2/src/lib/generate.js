@@ -23,6 +23,7 @@ const generate = (lectures, depth) => {
         ...division,
         id: `${lectures[depth].id}${division.id}`,
         name: lectures[depth].name,
+        color: lectures[depth].color,
         credit: lectures[depth].credit,
       };
 

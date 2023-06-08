@@ -7,7 +7,7 @@ const convert = (timetable) => {
   const result = [];
 
   timetable.map((tt) => {
-    const classInfo = { credit: tt.credit, name: tt.name };
+    const classInfo = { credit: tt.credit, name: tt.name, color: tt.color };
     const day = days.indexOf(tt.day);
     const time = Array.from(tt.time, mapfn);
 
@@ -46,9 +46,15 @@ const createTbody = (table, result) => {
 
     data.push(<th>{i}</th>);
     for (let j = 1; j < table[i].length; j++) {
+      const bgColor = `bg-${table[i][j].color}-500`;
+
       table[i][j].credit !== null
         ? JSON.stringify(table[i - 1][j]) !== JSON.stringify(table[i][j]) &&
-          data.push(<td rowspan={table[i][j].credit}>{table[i][j].name}</td>)
+          data.push(
+            <td rowSpan={table[i][j].credit} className={bgColor}>
+              {table[i][j].name}
+            </td>
+          )
         : data.push(<td></td>);
     }
 
