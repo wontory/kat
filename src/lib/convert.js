@@ -19,7 +19,7 @@ const convert = (timetable) => {
 
   return (
     <table
-      className="table table-zebra table-compact w-full text-center"
+      className="table table-compact w-full text-center"
       key={Math.random().toString(36)}
     >
       {result}
