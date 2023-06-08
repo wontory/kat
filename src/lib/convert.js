@@ -18,7 +18,10 @@ const convert = (timetable) => {
   createTbody(table, result);
 
   return (
-    <table className="table table-zebra table-compact w-full text-center">
+    <table
+      className="table table-zebra table-compact w-full text-center"
+      key={Math.random().toString(36)}
+    >
       {result}
     </table>
   );
@@ -29,10 +32,10 @@ const mapfn = (arg) => Number(arg);
 const createThead = (result) => {
   const data = [];
 
-  days.map((day) => data.push(<th>{day}</th>));
+  days.map((day) => data.push(<th key={Math.random().toString(36)}>{day}</th>));
 
   result.push(
-    <thead>
+    <thead key={Math.random().toString(36)}>
       <tr>{data}</tr>
     </thead>
   );
@@ -44,24 +47,26 @@ const createTbody = (table, result) => {
   for (let i = 1; i < table.length; i++) {
     const data = [];
 
-    data.push(<th>{i}</th>);
+    data.push(<th key={Math.random().toString(36)}>{i}</th>);
     for (let j = 1; j < table[i].length; j++) {
-      const bgColor = `bg-${table[i][j].color}-500`;
-
       table[i][j].credit !== null
         ? JSON.stringify(table[i - 1][j]) !== JSON.stringify(table[i][j]) &&
           data.push(
-            <td rowSpan={table[i][j].credit} className={bgColor}>
+            <td
+              rowSpan={table[i][j].credit}
+              className={table[i][j].color}
+              key={Math.random().toString(36)}
+            >
               {table[i][j].name}
             </td>
           )
-        : data.push(<td></td>);
+        : data.push(<td key={Math.random().toString(36)}></td>);
     }
 
-    row.push(<tr>{data}</tr>);
+    row.push(<tr key={Math.random().toString(36)}>{data}</tr>);
   }
 
-  result.push(<tbody>{row}</tbody>);
+  result.push(<tbody key={Math.random().toString(36)}>{row}</tbody>);
 };
 
 export default convert;
