@@ -14,7 +14,7 @@ const NavigationBar = (props) => {
         <Link
           to={"/"}
           className="btn btn-ghost normal-case text-xl gap-1"
-          href="/KAT-V2"
+          href="/"
         >
           <img src={logo} alt="logo" style={{ height: "17px" }} />
           KAT
