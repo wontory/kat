@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.47ddd4fa.css",
-    "main.js": "/static/js/main.1a8eba5d.js",
-    "static/media/PretendardVariable.woff2": "/static/media/PretendardVariable.36b3a87cd98126711b2b.woff2",
-    "static/media/kutis.png": "/static/media/kutis.1f18580c6823f6887704.png",
-    "static/media/sugang.png": "/static/media/sugang.00ab9277ec0db6718757.png",
-    "static/media/logo_transparent.png": "/static/media/logo_transparent.062d8160c747d05b4e1d.png",
-    "index.html": "/index.html"
+    "main.css": "/KAT-V2/static/css/main.47ddd4fa.css",
+    "main.js": "/KAT-V2/static/js/main.1eaa9e84.js",
+    "static/media/PretendardVariable.woff2": "/KAT-V2/static/media/PretendardVariable.36b3a87cd98126711b2b.woff2",
+    "static/media/kutis.png": "/KAT-V2/static/media/kutis.1f18580c6823f6887704.png",
+    "static/media/sugang.png": "/KAT-V2/static/media/sugang.00ab9277ec0db6718757.png",
+    "static/media/logo_transparent.png": "/KAT-V2/static/media/logo_transparent.062d8160c747d05b4e1d.png",
+    "index.html": "/KAT-V2/index.html"
   },
   "entrypoints": [
     "static/css/main.47ddd4fa.css",
-    "static/js/main.1a8eba5d.js"
+    "static/js/main.1eaa9e84.js"
   ]
 }
