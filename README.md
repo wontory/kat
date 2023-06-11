@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/wontory/KAT-V2"><img src="logo.png" alt="KAT" width="200"></a>
+  <a href="https://kat-kgu.com/"><img src="logo.png" alt="KAT" width="200"></a>
   <br>
   KAT
   <br>
