@@ -3,9 +3,12 @@ import React from "react";
 import TimetableItem from "../components/Timetables/TimetableItem";
 
 const Result = (props) => {
-  if (props.timetables.length === 0) {
-    return (
-      <div className="flex flex-wrap justify-center items-start p-8 gap-8 overflow-x-scroll overflow-y-hidden z-10 sm:flex-nowrap sm:justify-normal">
+  return (
+    <div
+      className="flex flex-wrap justify-center items-start p-8 gap-8 overflow-x-scroll overflow-y-hidden z-10 sm:flex-nowrap sm:justify-normal"
+      style={{ height: "calc(100vh - 65px)" }}
+    >
+      {props.timetables.length === 0 ? (
         <div className="alert alert-error shadow-lg">
           <div>
             <svg
@@ -24,21 +27,17 @@ const Result = (props) => {
             <span>생성된 시간표가 없습니다.</span>
           </div>
         </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="flex flex-wrap justify-center items-start p-8 gap-8 overflow-x-scroll overflow-y-hidden z-10 sm:flex-nowrap sm:justify-normal">
-      <ul className="flex flex-wrap justify-center items-start gap-8 sm:flex-nowrap sm:justify-normal">
-        {props.timetables.map((timetable) => (
-          <TimetableItem
-            key={timetable.id}
-            id={timetable.id}
-            item={timetable.lectures}
-          />
-        ))}
-      </ul>
+      ) : (
+        <ul className="flex flex-wrap justify-center items-start gap-8 sm:flex-nowrap sm:justify-normal">
+          {props.timetables.map((timetable) => (
+            <TimetableItem
+              key={timetable.id}
+              id={timetable.id}
+              item={timetable.lectures}
+            />
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

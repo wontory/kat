@@ -14,7 +14,7 @@ const Manual = () => {
           <h2 className="card-title">환영합니다!</h2>
           <div
             className="card-body p-0 overflow-y-scroll scrollbar-hide"
-            style={{ maxHeight: "calc(100vh - 228px)" }}
+            style={{ maxHeight: "calc(100vh - 229px)" }}
           >
             <div className="w-full">
               <strong>각종 문의 및 버그 제보</strong>는&nbsp;
