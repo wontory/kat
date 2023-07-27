@@ -2,7 +2,7 @@ import React from "react";
 
 const TimetableText = (props) => {
   return (
-    <div className="overflow-x-scroll scrollbar-hide">
+    <div className="overflow-x-scroll">
       <table className="table table-compact w-full text-center">
         <tbody>
           <tr>
