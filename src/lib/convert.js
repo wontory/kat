@@ -7,7 +7,11 @@ const convert = (timetable) => {
   const result = [];
 
   timetable.map((tt) => {
-    const classInfo = { credit: tt.credit, name: tt.name, color: tt.color };
+    const classInfo = {
+      credit: tt.credit,
+      name: tt.name,
+      color: tt.color,
+    };
     const day = days.indexOf(tt.day);
     const time = Array.from(tt.time, mapfn);
 
@@ -56,9 +60,7 @@ const createTbody = (table, result) => {
               rowSpan={table[i][j].credit}
               className={table[i][j].color}
               key={Math.random().toString(36)}
-            >
-              {table[i][j].name}
-            </td>
+            ></td>
           )
         : data.push(<td key={Math.random().toString(36)}></td>);
     }
