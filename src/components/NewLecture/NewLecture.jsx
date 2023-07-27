@@ -29,7 +29,7 @@ const NewLecture = (props) => {
   const saveLectureDataHandler = (enteredLectureData) => {
     const lectureData = {
       id: `l${props.id}`,
-      color: colors[props.id],
+      color: colors[props.id - 1],
       ...enteredLectureData,
     };
     props.onAddLecture(lectureData);
