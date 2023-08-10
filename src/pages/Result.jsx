@@ -5,7 +5,7 @@ import TimetableItem from "../components/Timetables/TimetableItem";
 const Result = (props) => {
   return (
     <div
-      className="flex flex-wrap justify-center items-start p-8 gap-8 overflow-x-scroll overflow-y-hidden z-10 sm:flex-nowrap sm:justify-normal"
+      className="flex flex-wrap justify-center items-start p-8 gap-8 overflow-y-hidden z-10 sm:flex-nowrap sm:justify-normal"
       style={{ minHeight: "calc(100vh - 65px)" }}
     >
       {props.timetables.length === 0 ? (
