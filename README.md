@@ -32,7 +32,6 @@
 ## Key Features
 
 - ClassSchedules - Create all possible timetables
-  - png, xlsx, txt
 
 ## How To Use
 
